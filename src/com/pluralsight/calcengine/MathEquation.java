@@ -36,6 +36,18 @@ public class MathEquation {
         return result;
     }
 
+    public MathEquation (char opCode) {
+        this.opCode = opCode;
+    }
+
+    public MathEquation() {}
+
+    public MathEquation (char opCode, double leftVal, double rightVal) {
+        this (opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
+
     public void execute() {
         switch (opCode) {
             case 'a':
