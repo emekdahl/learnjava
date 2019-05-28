@@ -2,6 +2,17 @@ package com.pluralsight.calcengine;
 
 public class MathEquation {
 
+    public MathEquation () {}
+
+    public MathEquation (char opCode) {
+        this.opCode = opCode;
+    }
+
+    public MathEquation (char opCode, double leftVal, double rightVal) {
+        this (opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
 
     private double leftVal;
     private double rightVal;
@@ -34,18 +45,6 @@ public class MathEquation {
 
     public double getResult() {
         return result;
-    }
-
-    public MathEquation (char opCode) {
-        this.opCode = opCode;
-    }
-
-    public MathEquation() {}
-
-    public MathEquation (char opCode, double leftVal, double rightVal) {
-        this (opCode);
-        this.leftVal = leftVal;
-        this.rightVal = rightVal;
     }
 
     public void execute() {
